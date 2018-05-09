@@ -1,0 +1,11 @@
+@media (max-width: 800px) {
+  .container .top .content .splash-top {
+    height: 140%;
+    grid-template-columns: 100%;
+    font-size: 0.7em;
+  }
+  .container .top .content .splash-top .splash-top-content {
+    margin: 3rem;
+  }
+}
+/*# sourceMappingURL=small-style.css.map */

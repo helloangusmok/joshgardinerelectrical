@@ -1,0 +1,31 @@
+@media (max-width: 500px) {
+  body button {
+    font-size: 2em;
+  }
+  .container .top .header-nav .header-content .logo {
+    margin: 1rem 0 0 0;
+  }
+  .container .top .header-nav .header-content .logo svg {
+    width: 30vw;
+  }
+  .container .top .header-nav .header-content .logo h5 {
+    font-size: 5vw;
+  }
+  .container .top .header-nav .header-content .nav-right .full-menu {
+    display: none;
+  }
+  .container .top .header-nav .header-content .nav-right .small-menu {
+    display: block;
+    text-align: right;
+    color: #FFFF00;
+    z-index: 100;
+  }
+  .container .top .content .splash-top .splash-top-content h3 {
+    font-size: 2.3em;
+  }
+  .container .top .content .splash-testimonial {
+    padding: 2rem;
+    grid-template-columns: 20% auto;
+  }
+}
+/*# sourceMappingURL=xs-style.css.map */

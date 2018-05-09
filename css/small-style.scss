@@ -1,0 +1,16 @@
+@media (max-width: 800px) {
+	.container {
+		.top {
+			.content {
+				.splash-top {
+					height: 140%;
+					grid-template-columns: 100%;
+					font-size: 0.7em;
+					.splash-top-content {
+						margin: 3rem;
+					}
+				}
+			}
+		}
+	}
+}

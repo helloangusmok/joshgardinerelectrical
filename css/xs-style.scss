@@ -1,0 +1,53 @@
+$black: #2c2e3a;
+$yellow: #FFFF00;
+$light-blue: #8AD8FF;
+$dark-blue: #003577;
+
+@media (max-width: 500px) {
+    body {
+        button {
+            font-size: 2em;
+        }
+    }
+    .container {
+        .top {
+            .header-nav {
+                .header-content {
+                    .logo {
+                        margin: 1rem 0 0 0;
+                        svg {
+                            width: 30vw;
+                        }
+                        h5 {
+                            font-size: 5vw;
+                        }
+                    }
+                    .nav-right {
+                        .full-menu {
+                            display: none;
+                        }
+                        .small-menu {
+                            display: block;
+                            text-align: right;
+                            color: $yellow;
+                            z-index: 100;
+                        }
+                    }
+                }
+            }
+            .content {
+                .splash-top {
+                    .splash-top-content {
+                        h3 {
+                            font-size: 2.3em;
+                        }
+                    }
+                }
+                .splash-testimonial {
+                    padding: 2rem;
+                    grid-template-columns: 20% auto;
+                }
+            }
+        }
+    }
+}

@@ -2,8 +2,7 @@ $black: #2c2e3a;
 $yellow: #FFFF00;
 $light-blue: #8AD8FF;
 $dark-blue: #003577;
-
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     body {
         button {
             font-size: 2em;
@@ -16,10 +15,10 @@ $dark-blue: #003577;
                     .logo {
                         margin: 1rem 0 0 0;
                         svg {
-                            width: 30vw;
+                            width: 160px;
                         }
                         h5 {
-                            font-size: 5vw;
+                            font-size: 19px;
                         }
                     }
                     .nav-right {
@@ -36,16 +35,92 @@ $dark-blue: #003577;
                 }
             }
             .content {
+                .here {
+                    display: block;
+                }
                 .splash-top {
-                    .splash-top-content {
+                    grid-template-columns: 100%;
+                    .splash-top-content, .splash-top-content-xs {
+                        display: none;
+                        margin: 2rem 1rem;
                         h3 {
-                            font-size: 2.3em;
+                            font-size: 1.5rem;
+                        }
+                        p {
+                            font-size: 1rem;
                         }
                     }
+                    .splash-top-content-xs {
+                        display: block;
+                    }
+                }
+                .section-content {
+					.service-main {
+						grid-area: service-list;
+                        grid-template-columns: auto;
+						grid-template-rows: auto auto auto;
+						grid-template-areas: "title"
+						"list"
+						"cta";
+                        .service-help {
+                            grid-area: title;
+                        }
+						.list-full {
+							display: block;
+							grid-area: list;
+						}
+						.list-one, .list-two {
+							display: none;
+						}
+						.cta {
+                            grid-area: cta;
+						}
+					}
                 }
                 .splash-testimonial {
                     padding: 2rem;
-                    grid-template-columns: 20% auto;
+                    grid-template-columns: 30px 30px auto;
+                    .testimonial-icon {
+                        i {
+                            font-size: 3rem;
+                        }
+                    }
+                    .testimonial-title {
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .testimonial-slider {
+                        .slide {
+                            p {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                .quote-content {
+                    .quote-content-grid {
+                        grid-template-columns: 100%;
+                        grid-row-gap: 1rem;
+                        grid-template-rows: auto auto;
+                        grid-template-areas: "blurb"
+                        "quote-form";
+                        .quote-blurb {
+                            h1 {
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .quote-img {
+                            display: none;
+                        }
+                        .quote-form {
+                            form {
+                                textarea {
+                                    height: 150px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

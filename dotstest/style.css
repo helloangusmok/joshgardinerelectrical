@@ -1,0 +1,7 @@
+li {
+    opacity: .5;
+}
+
+.slick-active {
+    opacity: 1;
+}

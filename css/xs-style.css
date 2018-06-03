@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   body button {
     font-size: 2em;
   }
@@ -6,10 +6,10 @@
     margin: 1rem 0 0 0;
   }
   .container .top .header-nav .header-content .logo svg {
-    width: 30vw;
+    width: 160px;
   }
   .container .top .header-nav .header-content .logo h5 {
-    font-size: 5vw;
+    font-size: 19px;
   }
   .container .top .header-nav .header-content .nav-right .full-menu {
     display: none;
@@ -20,12 +20,71 @@
     color: #FFFF00;
     z-index: 100;
   }
-  .container .top .content .splash-top .splash-top-content h3 {
-    font-size: 2.3em;
+  .container .top .content .here {
+    display: block;
+  }
+  .container .top .content .splash-top {
+    grid-template-columns: 100%;
+  }
+  .container .top .content .splash-top .splash-top-content, .container .top .content .splash-top .splash-top-content-xs {
+    display: none;
+    margin: 2rem 1rem;
+  }
+  .container .top .content .splash-top .splash-top-content h3, .container .top .content .splash-top .splash-top-content-xs h3 {
+    font-size: 1.5rem;
+  }
+  .container .top .content .splash-top .splash-top-content p, .container .top .content .splash-top .splash-top-content-xs p {
+    font-size: 1rem;
+  }
+  .container .top .content .splash-top .splash-top-content-xs {
+    display: block;
+  }
+  .container .top .content .section-content .service-main {
+    grid-area: service-list;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "title" "list" "cta";
+  }
+  .container .top .content .section-content .service-main .service-help {
+    grid-area: title;
+  }
+  .container .top .content .section-content .service-main .list-full {
+    display: block;
+    grid-area: list;
+  }
+  .container .top .content .section-content .service-main .list-one, .container .top .content .section-content .service-main .list-two {
+    display: none;
+  }
+  .container .top .content .section-content .service-main .cta {
+    grid-area: cta;
   }
   .container .top .content .splash-testimonial {
     padding: 2rem;
-    grid-template-columns: 20% auto;
+    grid-template-columns: 30px 30px auto;
+  }
+  .container .top .content .splash-testimonial .testimonial-icon i {
+    font-size: 3rem;
+  }
+  .container .top .content .splash-testimonial .testimonial-title h3 {
+    font-size: 1.5rem;
+  }
+  .container .top .content .splash-testimonial .testimonial-slider .slide p {
+    font-size: 1rem;
+  }
+  .container .top .content .quote-content .quote-content-grid {
+    grid-template-columns: 100%;
+    grid-row-gap: 1rem;
+    grid-template-rows: auto auto;
+    grid-template-areas: "blurb" "quote-form";
+  }
+  .container .top .content .quote-content .quote-content-grid .quote-blurb h1 {
+    font-size: 1.5rem;
+  }
+  .container .top .content .quote-content .quote-content-grid .quote-img {
+    display: none;
+  }
+  .container .top .content .quote-content .quote-content-grid .quote-form form textarea {
+    height: 150px;
   }
 }
 /*# sourceMappingURL=xs-style.css.map */

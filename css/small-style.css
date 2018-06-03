@@ -1,11 +1,67 @@
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+  .container .top .header-nav .header-content .logo svg {
+    width: 145px;
+  }
+  .container .top .header-nav .header-content .logo h5 {
+    font-size: 17px;
+  }
   .container .top .content .splash-top {
     height: 140%;
-    grid-template-columns: 100%;
-    font-size: 0.7em;
+    grid-template-columns: 80% auto;
   }
   .container .top .content .splash-top .splash-top-content {
     margin: 3rem;
+  }
+  .container .top .content .splash-top .splash-top-content h3 {
+    font-size: 2rem;
+  }
+  .container .top .content .splash-top .splash-top-content p {
+    font-size: 1.2rem;
+  }
+  .container .top .content .splash-testimonial {
+    padding: 2rem 3rem;
+    grid-template-columns: 40px 40px auto;
+  }
+  .container .top .content .splash-testimonial .testimonial-title h3 {
+    font-size: 2rem;
+  }
+  .container .top .content .splash-testimonial .testimonial-title i {
+    font-size: 3rem;
+  }
+  .container .top .content .splash-testimonial .testimonial-slider .slide p {
+    font-size: 1.2rem;
+  }
+  .container .top .content .section-content {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "service-1" "service-2" "service-list";
+  }
+  .container .top .content .section-content .service-hero-left {
+    grid-area: service-1;
+  }
+  .container .top .content .section-content .service-hero-right {
+    grid-area: service-2;
+  }
+  .container .top .content .section-content .service-main {
+    grid-area: service-list;
+  }
+  .container .footer .footer-content {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "links social" "credits credits";
+    grid-row-gap: 1rem;
+  }
+  .container .footer .footer-content .footer-nav-links {
+    grid-area: links;
+  }
+  .container .footer .footer-content .socials {
+    grid-area: social;
+    justify-self: end;
+    margin-right: 2rem;
+  }
+  .container .footer .footer-content .credits {
+    grid-area: credits;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=small-style.css.map */

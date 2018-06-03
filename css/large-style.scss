@@ -8,10 +8,10 @@ body {
 	width: 100%;
 	background-color: $black;
 	button {
+		font-family: 'Raleway', sans-serif;
 		border: 1px solid rgba(0, 0, 0, 0);
 		border-radius: 5px;
 		font-size: 1.5em;
-		font-family: 'Raleway', sans-serif;
 		font-weight: 900;
 		padding: 1rem 2rem;
 		transition: 0.6s;
@@ -33,7 +33,7 @@ body {
 		position: fixed;
 		width: 0;
 		height: 100%;
-		background-color: rgba(44,46,58,0.90);
+		background-color: rgba(44, 46, 58, 0.90);
 		z-index: 99;
 		overflow: hidden;
 		transition: 0.4s;
@@ -41,20 +41,23 @@ body {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -60%);
+			transform: translate(-50%, -55%);
 			a {
 				color: #FFFF00;
 				text-decoration: none;
+			}
+			h4 {
 				font-weight: 900;
 				font-size: 2em;
 			}
 		}
 	}
 }
+
 .container {
-	-webkit-box-shadow: 0px 0px 46px -6px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 0px 46px -6px rgba(0,0,0,0.25);
-	box-shadow: 0px 0px 46px -6px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 0px 46px -6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 46px -6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 46px -6px rgba(0, 0, 0, 0.25);
 	width: 1200px;
 	margin: 0 auto;
 	.top {
@@ -70,13 +73,14 @@ body {
 					align-self: center;
 					margin: 1rem 0;
 					svg {
-						width: 16vw;
+						width: 186px;
 					}
 					h5 {
 						text-align: left;
 						margin: 1rem 0 0 0;
-						font-size: 1.93vw;
+						font-size: 22px;
 						line-height: 0;
+						font-weight: 900;
 					}
 				}
 				h4 {
@@ -118,193 +122,331 @@ body {
 					.small-menu {
 						display: none;
 					}
+					.current-page {
+						color: $yellow;
+					}
 				}
 			}
 		}
 		.content {
+			background-image: url(/images/tools-light.jpg);
+			background-size: cover;
+			// min-height: 700px;
+			.here {
+				display: none;
+				text-align: center;
+				font-weight: 900;
+				background-color: $black;
+				h1 {
+					color: white;
+					padding: 1rem 0rem;
+					margin: 0;
+					font-weight: 900;
+				}
+			}
 			.splash-top {
 				display: grid;
 				grid-template-columns: 60% auto;
 				grid-template-areas: "content .";
 				text-align: left;
-				font-weight: 900;
 				background-image: url(/images/solar-3.jpg);
 				background-repeat: no-repeat;
 				background-size: cover;
-				height: 650px;
-				.splash-top-content {
-					margin: 2rem 0rem 0rem 6rem;
+				background-position: bottom;
+				.splash-top-content, .splash-top-content-xs {
+					background-color: rgba(44, 46, 58, 0.90);
+					border-radius: 30px;
+					margin: 4rem 0rem 4rem 6rem;
+					padding: 2rem;
 					h3 {
-						font-size: 3em;
-						mix-blend-mode: hard-light;
+						font-size: 3rem;
 						margin: 0 0 2rem 0;
+						font-weight: 900;
 					}
-					button {
-						background-color: $black;
-						color: $yellow;
-						mix-blend-mode: hard-light;
+					p {
+						font-size: 1.5rem;
+						font-weight: 700;
+						margin: 0;
 					}
-					button:hover {
-						background-color: #252525;
+					p, h3 {
+						color: white;
 					}
 				}
-				svg {
-					transition: 0.6s;
-				}
-				p {
-					font-size: 2vw;
-					transition: 0.6s;
+				.splash-top-content-xs {
+					display: none;
 				}
 			}
 			.splash-testimonial {
 				display: grid;
-				grid-template-columns: 7% auto;
-				grid-template-rows: auto auto;
-				grid-template-areas: "icon title"
-				"testimonial testimonial";
+				grid-template-columns: 50px 30px auto;
+				grid-template-rows: auto auto auto;
+				grid-template-areas: "icon . title" "testimonial testimonial testimonial" "anchor anchor anchor";
 				align-items: center;
-				grid-column-gap: 2rem;
 				grid-row-gap: 1rem;
-				font-size: 1.3em;
 				background-color: #FFFF00;
 				color: $black;
-				padding: 2rem 6rem;
+				padding: 2rem 4rem;
+				button {
+					color: $black;
+				}
+				button:focus {
+					background-color: transparent;
+				}
+				button:hover {
+					background-color: transparent;
+				}
+				button:active {
+					font-size: 1rem;
+				}
 				blockquote {
 					margin: 0 0 1rem 0;
-					font-weight: 400;
 				}
 				.testimonial-icon {
 					grid-area: icon;
+					font-size: 4rem;
+					padding: 0;
+					i {
+						vertical-align: middle;
+					}
 				}
 				.testimonial-title {
-					grid-area: title;
+					grid-area: title; 
+					h3 {
+						font-size: 2rem;
+						font-weight: 900;
+					}
 				}
-				.testimonial-review {
+				.testimonial-slider {
 					grid-area: testimonial;
-					background-color: rgba(44,46,58,0.15);
-					border-radius: 20px;
-					.review-content {
-						padding: 1rem;
+					display: flex;
+					overflow-x: auto;
+					.slide {
+						display: grid;
+						grid-template-rows: auto auto;
+						grid-template-areas: "top"
+						"bottom";
+						background-color: rgba(44, 46, 58, 0.15);
+						border-radius: 20px;
+						width: 100%;
+						height: 100%;
 						p {
 							margin: 0;
+							padding: 1rem;
+							font-size: 1.5rem;
+						}
+						blockquote {
+							grid-area: top;
+							i {
+								display: inline;
+							}
+							p {
+								font-weight: 400;
+							}
 						}
 						p:nth-child(2) {
-							font-weight: 900;
+							font-weight: 700;
 							text-align: right;
+							grid-area: bottom;
+							align-self: end;
 						}
+					}
+					.slide:focus {
+						outline: none;
+					}
+				}
+				.slider-anchors {
+					grid-area: anchor;
+					justify-self: center;
+					ul {
+						padding: 0;
+					}
+					li {
+						display: inline-block;
+						list-style-type: none;
+						transition: 0.4s;
+						border-radius: 50%;
+						font-size: 0;
+						margin: .2rem;
+					}
+					button {
+						background-color: rgba(44, 46, 58, 0.15);
+						padding: 0;
+						font-size: 0;
+						width: 20px;
+						height:	20px;
+						border-radius: 50%;
+						
+					}
+					.slick-active {
+						background-color: $black;
 					}
 				}
 			}
-			.info-content {
-				background-color: $yellow;
-				color: $black;
-				font-size: 1.5vw;
-				.info-title {
+			.section-content {
+				display: grid;
+				grid-template-columns: 50% 50%;
+				grid-template-rows: auto auto;
+				grid-template-areas: "top-left top-right"
+				"bottom bottom";
+				padding-top: 2rem;
+				// background-color: $yellow;
+				img {
+					border: 5px solid $black;
+					background-color: $black;
+				}
+				p, h2, h3 {
+					color: $black;
+				}
+				h2, h3 {
+					font-weight: 900;
+				}
+				.service-hero-left, .service-hero-right {
 					width: 90%;
 					margin: 0 auto;
-					font-size: 3rem;
-					padding: 1rem 0rem;
+					img {
+						width: 100%;
+						height: 20rem;
+						object-fit: cover;
+						border-radius: 30px;
+					}
 				}
-				svg {
-					fill: $black;
+				.service-hero-left {
+					grid-area: top-left;
 				}
-				.info-hero {
+				.service-main {
+					// background-image: url(/images/tools-light.jpg);
+					grid-area: bottom;
+					padding-bottom: 2rem;
 					display: grid;
 					grid-template-columns: 50% 50%;
-					width: 90%;
-					margin: 0 auto;
-					padding-bottom: 5rem;
-					.info-left {
-						text-align: left;
+					grid-template-rows: auto auto auto;
+					grid-template-areas: "heading heading"
+					"list-left list-right"
+					"bottom bottom";
+					padding: 2rem;
+					.service-help {
+						grid-area: heading;
+						i {
+							display: inline;
+							vertical-align: middle;
+							margin-right: .5rem;
+						}
 						h2 {
-							margin: 0;
-							padding-bottom: 1rem;
-						}
-						p {
-							font-weight: 400;
-							margin: 0;
-						}
-						.house-icon {
-							padding-bottom: 1rem;
-							width: 30%;
-							fill: $black;
-							display: block;
-							margin: 0 auto;
+							display: inline;
 						}
 					}
-					.info-right {
-						width: 100%;
-						margin: 0 auto;
-						border-radius: 30px;
-						background-color: $black;
-						color: $yellow;
-						.info-right-content {
-							padding: 2rem;
-						}
+					h2 {
+						grid-area: heading;
+					}
+					.list-one {
+						grid-area: list-left;
+					}
+					.list-two {
+						grid-area: list-right;
+					}
+					.list-full {
+						display: none;
+					}
+					.cta {
+						grid-area: bottom;
+						justify-self: center;
+					}
+					a {
+						text-decoration: underline;
+						color: $black;
 					}
 				}
-				.info-reasons {
-					width: 90%;
-					// margin: 0 auto;
+			}
+			.quote-content {
+				background-color: $yellow;
+				padding-bottom: 2rem;
+				min-height: 623px;
+				// background-image: url('/images/jg-lm-light.jpg');
+				// background-size: cover;
+				img {
+					border: 5px solid $black;
+					background-color: $black;
+				}
+				.quote-content-grid {
 					display: grid;
-					grid-template-columns: 15% 3% auto 10% 3% auto;
-					grid-template-rows: auto auto auto;
-					grid-template-areas:
-						"top-icon top top top top top"
-						"first-row-first-icon . first-row-first-reason first-row-second-icon . first-row-second-reason"
-						"second-row-first-icon .  second-row-first-reason  second-row-second-icon . second-row-second-reason";
-					grid-row-gap: 2rem;
-					padding-bottom: 4rem;
-					h2, h3, p {
-						text-align: left;
-						margin: 0;
+					grid-template-columns: 47% 6% 47%;
+					grid-template-rows: auto auto;
+					grid-template-areas: "blurb blurb blurb"
+					"quote-form . quote-img";
+					width: 90%;
+					margin: 0 auto;
+					.quote-blurb {
+						grid-area: blurb;
+						h1 {
+							font-weight: 900;
+						}
 					}
-					.why-us {
-						grid-area: top;
-						font-size: 1.5vw;
+					.quote-form {
+						grid-area: quote-form;
+						width: 100%;
 						align-self: center;
+						form {
+							box-sizing: border-box;
+							border-radius: 30px;
+							padding: 1rem;
+							background-color: $black;
+							input, textarea {
+								font-family: 'Raleway', sans-serif;
+								width: 100%;
+								border: 0;
+								background-color: $yellow;
+								padding: 10px 0;
+								border-radius: 15px;
+								padding: 1rem;
+								box-sizing: border-box;
+								margin-bottom: 1rem;
+								color: $black;
+							}
+							input:focus, textarea:focus {
+								outline: none;
+							}
+							input {
+								display: block;
+							}
+							textarea {
+								resize: none;
+								height: 165px;
+							}
+							button {
+								border-radius: 15px;
+								// background-color: $black;
+								// color: $yellow;
+							}
+							::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+								font-style: italic;
+							}
+							:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+								font-style: italic;
+							}
+							::-moz-placeholder { /* Mozilla Firefox 19+ */
+								font-style: italic;
+							}
+							:-ms-input-placeholder { /* Internet Explorer 10-11 */
+								font-style: italic;
+							}
+							::-ms-input-placeholder { /* Microsoft Edge */
+								font-style: italic;
+							}
+							::placeholder { /* Most modern browsers support this now. */
+								font-style: italic;
+							}
+						}
+						#thankyou_message {
+							text-align: center;
+						}
 					}
-					.bulb {
-						grid-area: top-icon;
-						text-align: center;
-						width: 60%;
-						justify-self: end;
-					}
-					.first-icon, .second-icon, .third-icon, .fourth-icon {
-						align-self: center;
-						text-align: right;
-					}
-					.first-icon {
-						grid-area: first-row-first-icon;
-						width: 25%;
-						justify-self: end;
-					}
-					.first-reason {
-						grid-area: first-row-first-reason;
-					}
-					.second-icon {
-						grid-area: first-row-second-icon;
-						width: 50%;
-						justify-self: end;
-					}
-					.second-reason {
-						grid-area: first-row-second-reason;
-					}
-					.third-icon {
-						grid-area: second-row-first-icon;
-						width: 30%;
-						justify-self: end;
-					}
-					.third-reason {
-						grid-area: second-row-first-reason;
-					}
-					.fourth-icon {
-						grid-area: second-row-second-icon;
-						width: 50%;
-						justify-self: end;
-					}
-					.fourth-reason {
-						grid-area: second-row-second-reason;
+					.quote-img {
+						grid-area: quote-img;
+						img {
+							width: 100%;
+							object-fit: cover;
+							border-radius: 30px;
+						}
 					}
 				}
 			}
@@ -315,7 +457,7 @@ body {
 		width: 100%;
 		.footer-content {
 			display: grid;
-			grid-template-columns: 25% 50% 25%;
+			grid-template-columns: 40% 20% 40%;
 			grid-template-areas: "left . right";
 			color: $yellow;
 			width: 90%;
@@ -356,8 +498,7 @@ body {
 				}
 			}
 			.socials {
-				width: 10%;
-				margin: 0 auto;
+				justify-self: center;
 				align-self: center;
 				svg:hover path {
 					fill: $light-blue;
@@ -369,9 +510,17 @@ body {
 				align-self: center;
 				p,
 				a {
-					font-size: .8vw !important;
+					font-size: 1vw !important;
 				}
 			}
+		}
+	}
+	.dots {
+		li {
+			// display: inline;
+			margin: 0 .2rem;
+			// padding: 0;
+			list-style-type: circle;
 		}
 	}
 }

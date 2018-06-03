@@ -1,14 +1,86 @@
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 	.container {
 		.top {
+			.header-nav {
+				.header-content {
+					.logo {
+						svg {
+							width: 145px;
+						}
+						h5 {
+							font-size: 17px;
+						}
+					}
+				}
+			}
 			.content {
 				.splash-top {
 					height: 140%;
-					grid-template-columns: 100%;
-					font-size: 0.7em;
+					grid-template-columns: 80% auto;
 					.splash-top-content {
 						margin: 3rem;
+						h3 {
+							font-size: 2rem;
+						}
+						p {
+							font-size: 1.2rem;
+						}
 					}
+				}
+				.splash-testimonial {
+					padding: 2rem 3rem;
+					grid-template-columns: 40px 40px auto;
+					.testimonial-title {
+						h3 {
+							font-size: 2rem;
+						}
+						i {
+							font-size: 3rem;
+						}
+					}
+					.testimonial-slider {
+						.slide {
+							p {
+								font-size: 1.2rem;
+							}
+						}
+					}
+				}
+				.section-content {
+					grid-template-columns: 100%;
+					grid-template-rows: auto auto auto;
+					grid-template-areas: "service-1"
+					"service-2"
+					"service-list";
+					.service-hero-left {
+						grid-area: service-1;
+					}
+					.service-hero-right {
+						grid-area: service-2;
+					}
+					.service-main {
+						grid-area: service-list;
+					}
+				}
+			}
+		}
+		.footer {
+			.footer-content {
+				grid-template-columns: 50% 50%;
+				grid-template-rows: auto auto;
+				grid-template-areas: "links social" "credits credits";
+				grid-row-gap: 1rem;
+				.footer-nav-links {
+					grid-area: links;
+				}
+				.socials {
+					grid-area: social;
+					justify-self: end;
+					margin-right: 2rem;
+				}
+				.credits {
+					grid-area: credits;
+					text-align: center;
 				}
 			}
 		}
